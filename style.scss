@@ -1,0 +1,169 @@
+
+/*
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Fonts
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+$font-size: 15px;
+$font-poppins: 'Poppins', sans-serif;
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$vdarkblue:hsl(234, 12%, 34%);
+$gblue: hsl(229, 6%, 66%);
+$vlightblue: hsl(0, 0%, 98%);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: $vlightblue;
+    font-family: $font-poppins;
+}
+//HEADER HERE
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    text-align: center;
+}
+.header-title {
+    
+    h1 {
+        font-weight: 200;
+        color: $vdarkblue;
+        max-width: 380px;
+        font-size: 1.5rem;  
+    }
+}
+.header-subtitle {
+
+    h1 {
+        color: $vdarkblue;
+        max-width: 380px;
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+}
+.header-paragraph {
+
+    p {
+        max-width: 330px;
+        color: $gblue;
+    }
+}
+//HEADER END
+
+//GRID CONTAINER
+.grid-container {
+    margin: 0 30px;
+}   
+.row {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    grid-row-gap: 30px;
+    margin: 50px 0;
+}
+
+.col-md-3 {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.0), 0 1px 2px rgba(0,0,0,0.24);
+    height: auto;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 5px;
+    .item-pos {
+        max-width: 300px;
+        h3 {
+            color: $vdarkblue;
+            padding-bottom: 10px;
+        }
+        p {
+            padding-bottom: 30px;
+            color: $gblue;
+        }
+
+    }
+
+    .item-icon {
+        float: right;
+    }
+}
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+//BORDER-TOP COLORED 
+.supervisor-border {
+    border-top: 5px solid $cyan;
+}
+.teamb-border {
+    border-top: 5px solid $red;
+}
+.karma-border {
+    border-top: 5px solid $orange;
+}
+.calc-border {
+    border-top: 5px solid $blue;
+}
+//END OF DESIGN BORDER
+
+//RESPONSIVE DESIGN
+@media (min-width: 992px) {
+    .header-title {
+
+        h1 {
+            max-width: 500px;
+            font-size: 2rem;
+        }
+    }
+    .header-subtitle {
+    
+        h1 {
+            max-width: 500px;
+            font-size: 2rem;
+        }
+    }
+    .header-paragraph {
+    
+        p {
+            max-width: 550px;
+        }
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        max-width: 100%;
+    }
+    .flex-wrapper {
+        gap: 50px;
+    }
+}
